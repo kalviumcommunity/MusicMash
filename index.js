@@ -8,7 +8,17 @@ import Singerrouter from "./routes/singer/route.ts";
 import { Song, Author } from "./model/index.ts";
 const app = express();
 
-
+async function connectDB() {
+  try {
+    const db = await mongoose.connect(process.env.MONGODB_URL);
+    if (db.connection) {
+      console.log("Connected to MongoDB");
+    }
+  } catch (error) {
+    console.log(error);
+  }
+}
+connectDB();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(
