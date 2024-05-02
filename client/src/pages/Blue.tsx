@@ -14,6 +14,7 @@ const Blue = () => {
   }, [])
   return (
     <div className=' w-full h-screen p-5'>
+      
       <img src={data.image} alt="" className=' w-full h-[50%] bg-slate-200 rounded object-cover' />
       <p className=' text-[64px]'>{data.artist}</p>
       <p className=' text-[34px]'>{data.song}</p>
