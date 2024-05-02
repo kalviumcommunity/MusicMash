@@ -5,7 +5,7 @@ import { User } from "../../model";
 
 const Authrouter = express.Router();
 
-Authrouter.post("/signup", async (req, res) => {
+Authrouter.post("/signup", async (req,  res) => {
   try {
     const { username, password, email } = await req.body;
     const userv = await User.findOne({ username });
