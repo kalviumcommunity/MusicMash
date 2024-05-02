@@ -50,7 +50,7 @@ const verify = (req) => {
     throw new Error("Authorization header missing or invalid");
   }
   const token = req.headers.authorization.split(" ")[1];
-  const verify = jwt.verify(token, process.env.TOKEN_SECRET!);
+  const verify = jwt.verify(token, process.env.TOKEN_SECRET);
   return verify.email;
 };
 Authrouter.get("/", async (req, res) => {
