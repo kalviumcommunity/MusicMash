@@ -1,11 +1,11 @@
 import express from "express";
 import mongoose from "mongoose";
-import router from "./routes/auth/route.ts";
+import router from "./routes/auth/route.js";
 import cors from "cors";
-import Authrouter from "./routes/auth/route.ts";
-import Songrouter from "./routes/song/route.ts";
-import Singerrouter from "./routes/singer/route.ts";
-import { Song, Author } from "./model/index.ts";
+import Authrouter from "./routes/auth/route.js";
+import Songrouter from "./routes/song/route.js";
+import Singerrouter from "./routes/singer/route.js";
+import { Song, Author } from "./model/index.js";
 const app = express();
 async function connectDB() {
   try {
